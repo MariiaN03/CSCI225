@@ -1,2 +1,2 @@
 # CSCI225
-WevDev. class for homework
+WebDev. class for homework
