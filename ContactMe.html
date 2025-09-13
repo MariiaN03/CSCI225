@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Me_CSCI225_NechepurenkoMariia</title>
+    </head>
+    <body>
+        <h1>Contact Me</h1>
+        <div class="Video">
+            <hr>
+            <iframe src="https://www.youtube-nocookie.com/embed/Aq3ayTyKEeI" title="Walkthrough Video - Red Veil Operations" width="560" height="315">
+            </iframe>
+            <p><small>Walkthrough Video - Red Veil Operations <br>
+                Group project 3</small>
+            </p>
+            <hr>
+        </div>
+        <div class="Feedback">
+            <form name="Feedback" action="">
+                <h2>Feedback Form</h2>
+                <p><b>Please provide your feedback below:</b></p>
+                <p>*First Name:<input type="text" name="fname" placeholder="anonymous" required>
+                *Last Name:<input type="text" name="lname" placeholder="anonymous" required>
+                </p>
+                <p>Enter your email:<input type="email" name="mail" placeholder="name@domain.com" required>
+                Select date:<input type="date" name="date"><br>
+                Write your phone number <i>(optional)</i>: <input type="tel" name="phonenumber" placeholder="+1 (___) ___-____" pattern="\+1 \(\d{3}\) \d{3}-\d{4}">
+                </p>
+                <p>Would you recommend this website to someone? <br>
+                    <label><input type="radio" name="Recomendation" value="yes"><b>Yes</b></label>
+                    <label><input type="radio" name="Recomendation" value="no">No</label>
+                </p> 
+                <p>Rate this website:<br>
+                    <input type="range" name="Rating" min="1" max="10" step="1" list="markers"> 
+                    <datalist id="markers">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3">
+                        <option value="4">
+                        <option value="5">
+                        <option value="6">
+                        <option value="7">
+                        <option value="8">
+                        <option value="9">
+                        <option value="10">
+                    </datalist>
+                    <br>
+                    <small>1 - lowest, 10 - highest</small>
+                </p>
+                 <p>Select your favorite website:<br>
+                    <select name="FavWebsite" size="1">
+                        <option value="Google">Google</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Twitter">Twitter</option>
+                        <option value="Time">Time</option>
+                        <option value="AO3">AO3</option>
+                        <option value="YouTube">YouTube</option>
+                        <option value="Reddit">Reddit</option>
+                        <option value="Wikipedia">Wikipedia</option>
+                        <option value="None">None</option>
+                    </select>
+                    <br> Or, put an url of your favorite website here: 
+                    <input type="url" name="UserFavWebsite" placeholder="http://www.domainame.com" size="25">
+                </p> 
+                <p>Any additional comments or suggestions:<br>
+                    <textarea name="Comment" rows="5" cols="40" placeholder="Your comments/suggestions here..."></textarea>
+                </p>
+                <p>
+                    <input type="reset" name="reset" value="Reset">
+                    <input type="submit" name="submit" value="Submit">
+                </p>
+            </form>
+        </div>
+
+    </body>
+</html>
