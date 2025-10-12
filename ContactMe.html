@@ -2,74 +2,280 @@
 <html lang="en">
     <head>
         <title>Contact Me_CSCI225_NechepurenkoMariia</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        
+        <style type="text/css">
+
+            body{
+                background-color: hsl(220, 7%, 18%);
+                color: white;
+            }
+
+            .container{
+                border-radius: 20px;
+                padding: 3vh;
+                top: -3%;
+            }
+             .navbar{
+                border-radius: 0 0 20px 20px;             
+            }
+
+
+            #Submit, #Reset{
+                width: 15vh;
+            }
+
+            #Submit{
+                margin-right: 2vh;
+            }
+
+            /**Padding and Margin**/ 
+
+            #SelectWebsite{
+                margin-top: 2.3vh;
+            }
+            @media (min-width: 100px){
+                #SelectWebsite{ 
+                    margin-top: 5.5vh; 
+                }   
+            }
+            @media (min-width: 1200px){
+                #SelectWebsite{ 
+                    margin-top: 2.3vh;
+                }   
+            }
+
+            #ResetSubmit{
+                margin-top: 2vh;
+                padding: 2vh;
+            }
+
+            .container{
+                margin-top: 8vh;
+            }
+           
+
+
+        </style>
+    
     </head>
+
     <body>
-        <h1>Contact Me</h1>
-        <div class="Video">
-            <hr>
-            <iframe src="https://www.youtube-nocookie.com/embed/Aq3ayTyKEeI" title="Walkthrough Video - Red Veil Operations" width="560" height="315">
-            </iframe>
-            <p><small>Walkthrough Video - Red Veil Operations <br>
-                Group project 3</small>
-            </p>
-            <hr>
-        </div>
-        <div class="Feedback">
-            <form name="Feedback" action="">
-                <h2>Feedback Form</h2>
-                <p><b>Please provide your feedback below:</b></p>
-                <p>*First Name:<input type="text" name="fname" placeholder="anonymous" required>
-                *Last Name:<input type="text" name="lname" placeholder="anonymous" required>
-                </p>
-                <p>Enter your email:<input type="email" name="mail" placeholder="name@domain.com" required>
-                Select date:<input type="date" name="date"><br>
-                Write your phone number <i>(optional)</i>: <input type="tel" name="phonenumber" placeholder="+1 (___) ___-____" pattern="\+1 \(\d{3}\) \d{3}-\d{4}">
-                </p>
-                <p>Would you recommend this website to someone? <br>
-                    <label><input type="radio" name="Recomendation" value="yes"><b>Yes</b></label>
-                    <label><input type="radio" name="Recomendation" value="no">No</label>
-                </p> 
-                <p>Rate this website:<br>
-                    <input type="range" name="Rating" min="1" max="10" step="1" list="markers"> 
-                    <datalist id="markers">
-                        <option value="1">
-                        <option value="2">
-                        <option value="3">
-                        <option value="4">
-                        <option value="5">
-                        <option value="6">
-                        <option value="7">
-                        <option value="8">
-                        <option value="9">
-                        <option value="10">
-                    </datalist>
-                    <br>
-                    <small>1 - lowest, 10 - highest</small>
-                </p>
-                 <p>Select your favorite website:<br>
-                    <select name="FavWebsite" size="1">
-                        <option value="Google">Google</option>
-                        <option value="Facebook">Facebook</option>
-                        <option value="Twitter">Twitter</option>
-                        <option value="Time">Time</option>
-                        <option value="AO3">AO3</option>
-                        <option value="YouTube">YouTube</option>
-                        <option value="Reddit">Reddit</option>
-                        <option value="Wikipedia">Wikipedia</option>
-                        <option value="None">None</option>
-                    </select>
-                    <br> Or, put an url of your favorite website here: 
-                    <input type="url" name="UserFavWebsite" placeholder="http://www.domainame.com" size="25">
-                </p> 
-                <p>Any additional comments or suggestions:<br>
-                    <textarea name="Comment" rows="5" cols="40" placeholder="Your comments/suggestions here..."></textarea>
-                </p>
-                <p>
-                    <input type="reset" name="reset" value="Reset">
-                    <input type="submit" name="submit" value="Submit">
-                </p>
-            </form>
+                <!--<div class="navbar bg-dark fixed-top border-bottom border-body" data-bs-theme="dark"> 
+                    <div class="navbar nav">
+                        <li class="nav-item"><a class="nav-link" href="https://www.usca.edu/">University of South Carolina Aiken</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.saxion.edu/">Saxion University of Applied Sciences</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://blackboard.sc.edu/?new_loc=%2Fultra%2Fcourses%2F_1320339_1%2Foutline%2Ffile%2F_26776480_1">Blackboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#assignment">Assignment Section</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contactinfo">Contact Information</a></li>
+                    </div>
+                </div>-->
+
+        <nav class="navbar navbar-dark bg-dark fixed-top border-bottom shadow">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <!-- home link -->
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+
+                            <!-- Divider -->
+                            <li class="nav-item">
+                                <hr>
+                            </li>
+
+                            <!-- links -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.usca.edu/" target="_blank">University of South Carolina Aiken</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.saxion.edu/" target="_blank">Saxion University of Applied Sciences</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://blackboard.sc.edu/?new_loc=%2Fultra%2Fcourses%2F_1320339_1%2Foutline%2Ffile%2F_26776480_1" target="_blank">Blackboard</a>
+                            </li>
+
+                            <!-- Divider -->
+                            <li class="nav-item">
+                                <hr>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Assignment
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="doc/Assignment1.pdf" target="_blank">Assignment 1</a></li>
+                                    <li><a class="dropdown-item" href="doc/Assignment2.pdf" target="_blank">Assignment 2</a></li>
+                                    <li><a class="dropdown-item" href="doc/Assignment3.pdf" target="_blank">Assignment 3</a></li>
+                                    <li><a class="dropdown-item" href="doc/Assignment4.docx" target="_blank">Assignment 4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container">  
+
+            <div class="row">
+                <h1 class="display-5">Contact Me</h1>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="Video">
+                        <hr>
+                        <iframe src="https://www.youtube-nocookie.com/embed/Aq3ayTyKEeI" class="rounded-5" title="Walkthrough Video - Red Veil Operations" width="560" height="315">
+                        </iframe>
+                        <p><small>Walkthrough Video - Red Veil Operations <br>
+                            Group project 3</small>
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="Feedback">
+                        <form name="Feedback" action="">
+                            <h2 class="display-6">Feedback Form</h2>
+                            <p>Please provide your feedback below:</p>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" name="fname" placeholder="anonymous" id="validationCustom01" required>  
+                                <label for="floatingInput">*First Name:</label>
+                                
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" name="lname" placeholder="anonymous" required>
+                                <label for="floatingInput">*Last Name:</label>   
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" name="mail" value="name@domain.com" placeholder="name@domain.com" required> 
+                                        <label for="floatingInput">*Enter your email:</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <p>Select date: <br> <input type="date" name="date"></p>
+                                </div> 
+                            </div>
+
+                            <hr>
+
+                            <div class="form-floating mb-3">
+                                <input type="tel" class="form-control" name="phonenumber" placeholder="+1 (___) ___-____" value="+1 (___) ___-____" pattern="\+1 \(\d{3}\) \d{3}-\d{4}">
+                                <label for="floatingInput">Write your phone number <i>(optional)</i>:</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    
+                                    <p>Would you recommend this website to someone? <br>
+                                    <label><input type="radio" name="Recomendation" value="yes"><b>Yes</b></label>
+                                    <label><input type="radio" name="Recomendation" value="no">No</label>
+                                    </p> 
+                                </div>
+                                <div class="col">
+                                    
+                                        <input type="range" class="form-range" name="Rating" min="1" max="10" step="1" list="markers"  id="range4"> 
+                                        <label for="range4" class="form-label">Rate this website: </label>
+                                        <output for="range4" id="rangeValue" aria-hidden="true"></output>
+
+                                        <script>
+                                            // This is an example script, please modify as needed
+                                            const rangeInput = document.getElementById('range4');
+                                            const rangeOutput = document.getElementById('rangeValue');
+
+                                            // Set initial value
+                                            rangeOutput.textContent = rangeInput.value;
+
+                                            rangeInput.addEventListener('input', function() {
+                                            rangeOutput.textContent = this.value;
+                                            });
+                                        </script>
+
+                                            <!-- <datalist id="markers">
+                                                <option value="1">
+                                                <option value="2">
+                                                <option value="3">
+                                                <option value="4">
+                                                <option value="5">
+                                                <option value="6">
+                                                <option value="7">
+                                                <option value="8">
+                                                <option value="9">
+                                                <option value="10">
+                                            </datalist> 
+                                        
+                                        <small>1 - lowest, 10 - highest</small> -->
+                                    
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col" >
+                                    <p>Select your favorite website:<br>
+                                        <select class="form-select" name="FavWebsite" size="1" id="SelectWebsite">
+                                            <option value="Google">Google</option>
+                                            <option value="Facebook">Facebook</option>
+                                            <option value="Twitter">Twitter</option>
+                                            <option value="Time">Time</option>
+                                            <option value="AO3">AO3</option>
+                                            <option value="YouTube">YouTube</option>
+                                            <option value="Reddit">Reddit</option>
+                                            <option value="Wikipedia">Wikipedia</option>
+                                            <option value="None">None</option>
+                                        </select>
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <p>Or, write a name of your favorite website:</p>
+                                    <div class="form-floating mb-3">
+                                            <input type="url" class="form-control" name="UserFavWebsite" value="http://www.domainame.com" placeholder="http://www.domainame.com" size="25">
+                                            <label for="floatingInput">Favorite website:</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 80px"></textarea>
+                                <label for="floatingTextarea">Any additional comments or suggestions:</label>
+                            </div>
+
+                            <div class="row" id="ResetSubmit">
+                                <!-- <div class="col-md-2"> -->
+                                    <button type="submit" class="btn btn-primary" id="Submit">Submit</button>
+                                <!-- </div> -->
+                                <!-- <div class="col-md-2"> -->
+                                    <button type="reset" class="btn btn-secondary" id="Reset">Reset</button>
+                                    <!-- <input type="reset" name="reset" value="Reset"> -->
+                                <!-- </div> -->
+                            </div>
+                            
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
 
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>   
     </body>
 </html>
