@@ -67,7 +67,7 @@ footer{
     z-index: 1;
 }
 
-.introduction h1, .portfolio h1, address p, .schedule h1, .assignment h1{
+.introduction h1, .portfolio h1, address h1, .schedule h1, .assignment h1{
     background-color: rgb(97, 56, 56);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
@@ -80,7 +80,7 @@ footer{
     font-size: 1.7rem;
     z-index: 2;
 }
-address p{
+address h1{
     height: 4.7rem;
 }
 
@@ -107,7 +107,7 @@ address p{
     left: 75%;
     top: 62%;
 }
-address p{
+address h1{
     position: absolute;
     left: 44%;
     top: 82%;
@@ -117,6 +117,7 @@ address p{
 .introContent, .assignmentContent, .portfolioContent, .contactContent, .tableContainer{
     background-color: rgb(211, 182, 164);
     visibility: hidden;
+    transition: visibility 0.4s ease;
     z-index: 3;
 }
 
@@ -221,33 +222,41 @@ td.Animation {
 
 
 /** hide&unhide**/
-.introduction h1:hover + .introContent,
+/**.introduction h1:hover + .introContent,
 .assignment h1:hover + .assignmentContent,
 address p:hover + .contactContent,
 .portfolio h1:hover + .portfolioContent,
 .schedule h1:hover + .tableContainer{
     visibility: visible;
     transition: visibility 2s ease;
+} **/
+
+.introContent.active,
+.assignmentContent.active,
+.portfolioContent.active,
+.tableContainer.active,
+.contactContent.active{
+    visibility: visible;
 }
-.introduction h1:hover{
+.introduction h1.active{
     transform: translateX(8.9vh);
     border-radius: 20px 20px 0 0;
     transition: transform 0.2s ease, border-radius 0.2s ease;
 }
 
-.assignment h1:hover{
+.assignment h1.active{
     transform: translateX(-10.1vh);
     border-radius: 20px 20px 0 0;
     transition: transform 0.2s ease, border-radius 0.2s ease;
 }
 
-.portfolio h1:hover{
+.portfolio h1.active{
     transform: translateY(12.7vh);
     border-radius: 0 20px 20px 0;
     transition: transform 0.4s ease, border-radius 0.2s ease;
 }
 
-.schedule h1:hover{
+.schedule h1.active{
     transform: translateY(8.9vh);
     border-radius: 20px 0 0 20px;
     transition: transform 0.4s ease, border-radius 0.2s ease;

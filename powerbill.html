@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSCI225_PowerBill_NechepurenkoMariia</title>
+        <link rel="stylesheet" href="css/powerbill.css">
+        <script src="js/powerBill.js" defer></script>
+    </head>
+
+    <body>
+        <div class="Calculator" id="CalculatorID">
+            <h1>Georgia Power Bill Calculator</h1>
+            <p>The utility bill calculator is a resource that the Commission is making available that allows a consumer to check the accuracy of his/her monthly 
+                electric bill. A bill calculator has been prepared for customers of the Georgia Power Company. This bill calculator applies only to residential customers who are 
+                receiving service under the standard Residential Tariff (R-27). For more details regarding Georgia Power's residential tariff offerings, please visit Georgia Power Pricing & Rates. 
+            </p>
+            <p>Effective August 2023</p>
+
+            <form class="FormCalculator" id="FormCalculatorID">
+                
+                <p class="FormInput">
+                    Enter your Monthly Usage in kilowatt hours (kWh):
+                    <input type="number" id="UsageID" required>
+                </p>
+                <p class="FormInput">
+                    Enter the number of days for your current billing period:
+                    <input type="number" id="DaysID" required>
+                </p>
+                <p class="FormInput">
+                    Is your residence INSIDE the city limits of your city?
+                    <input type="checkbox" id="CityLimitsID">
+                </p>
+                <p class="FormInput">
+                    Is this a Summer month (June-September)?             
+                    <input type="checkbox" id="SummerMonthID">
+                </p>
+                <p class="FormInput">
+                    Enter Sales Tax (%)                                        
+                    <input type="number" id="SalesTaxID" required>
+                </p>
+                <button type="submit" id="CalculateButtonID">Submit</button>
+                <button type="reset" id="ResetButtonID">Reset</button>
+            </form>
+        </div>
+
+        <div class="Details" id="DetailsID">
+            <h1>Details of your bill</h1>
+            <table>  
+                <thead>
+                    <tr>
+                        <th class="tHeadLeft">Items</th>
+                        <th>Fees</th>
+                    </tr> 
+                </thead>
+                <tbody>
+                    <tr class="ColoredRow">
+                        <td>Base Charge</td>
+                        <td id="BaseChargeID">14.27</td>
+                    </tr>
+                    <tr>
+                        <td>Tier 1 Component (kWh):</td>
+                        <td id="Tier1ComponentID">40.56</td>
+                    </tr>
+                    <tr class="ColoredRow">
+                        <td>Tier 2 Component (kWh):</td>
+                        <td id="Tier2ComponentID">21.84</td>
+                    </tr>
+                    <tr>
+                        <td>Tier 3 Component (kWh):</td>
+                        <td id="Tier3ComponentID">0.00</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr class="ColoredRow">
+                        <th class="tHeadLeft">Base Revenue -- Base Bill Subtotal:</th>
+                        <th id="BaseRevenueID">76.67</th>
+                    </tr> 
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fuel Cost Rider:</td>
+                        <td id="FuelCostRiderID">42.86</td>
+                    </tr>
+                    <tr class="ColoredRow">
+                        <td>Demand Side Management Residential Rider:</td>
+                        <td id="DemandSideManagementID">1.23</td>
+                    </tr>
+                    <tr>
+                        <td>Nuclear Construction Cost Recovery Rider:</td>
+                        <td id="NuclearConstructionCostRecoveryID">3.19</td>
+                    </tr>
+                    <tr class="ColoredRow">
+                        <td>Environmental Compliance Cost Recovery Rider:</td>
+                        <td id="EnvironmentalComplianceCostRecoveryID">12.48</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th class="tHeadLeft">Total Revenue -- Current Service Subtotal:</th>
+                        <th id="TotalRevenueID">136.43</th>
+                    </tr> 
+                </thead>
+                <tbody>
+                    <tr class="ColoredRow">
+                        <td>Franchise Fee:</td>
+                        <td id="FranchiseFeeID">1.62</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th class="tHeadLeft">Total (excluding tax):</th>
+                        <th id="TotalExcludingTaxID">138.04</th>
+                    </tr> 
+                </thead>
+                <thead>
+                    <tr class="ColoredRow">
+                        <th class="tHeadLeft">TOTAL (w/tax):</th>
+                        <th id="TotalWithTaxID">147.71</th>
+                    </tr> 
+                </thead>
+            </table>
+        </div>
+    </body>
+</html>
+     
